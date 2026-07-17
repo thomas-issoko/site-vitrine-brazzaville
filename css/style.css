@@ -1,0 +1,469 @@
+/* ========================================
+   STYLES GÉNÉRAUX
+   ======================================== */
+
+/* Réinitialisation des marges et polices */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;  /* Pour que les dimensions soient faciles à gérer */
+}
+
+/* Corps de la page */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;         /* Espace entre les lignes */
+    color: #1A1A1A;           /* Noir */
+    background-color: #FAFAFA;
+}
+
+/* Conteneur pour limiter la largeur des sections */
+.container {
+    max-width: 1200px;        /* Largeur max sur grand écran */
+    margin: 0 auto;           /* Centrer automatiquement */
+    padding: 0 20px;          /* Petites marges sur les côtés */
+}
+
+/* ========================================
+   EN-TÊTE ET NAVIGATION
+   ======================================== */
+
+header {
+    background-color: #1A1A1A;  /* Fond noir */
+    color: #FFFFFF;
+    padding: 15px 0;
+    position: sticky;           /* Menu collé en haut */
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+header .container {
+    display: flex;              /* Flexbox pour aligner logo et menu */
+    justify-content: space-between; /* Logo à gauche, menu à droite */
+    align-items: center;
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.logo-icon {
+    font-size: 2rem;
+    color: #D4AF37;            /* Doré */
+}
+
+.logo-text {
+    color: #D4AF37;            /* Doré */
+}
+
+/* Navigation */
+nav ul {
+    display: flex;
+    list-style: none;          /* Supprimer les puces */
+    gap: 30px;                 /* Espace entre les liens */
+}
+
+nav ul li a {
+    color: #FFFFFF;
+    text-decoration: none;     /* Supprimer le soulignement */
+    font-size: 1.1rem;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #D4AF37; /* Doré au survol */
+    color: #1A1A1A;
+}
+
+nav ul li a.active {
+    background-color: #D4AF37; /* Doré pour la page active */
+    color: #1A1A1A;
+}
+
+/* ========================================
+   SECTION HERO (BANNIÈRE)
+   ======================================== */
+
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                url('../images/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #FFFFFF;
+    padding: 120px 0;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    color: #D4AF37;            /* Doré */
+    margin-bottom: 15px;
+}
+
+.hero-subtitle {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.hero-description {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto 30px;
+    line-height: 1.8;
+}
+
+/* ========================================
+   BOUTONS
+   ======================================== */
+
+.btn-primary {
+    display: inline-block;
+    background-color: #D4AF37;  /* Doré */
+    color: #1A1A1A;
+    padding: 15px 35px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: #B8960F;  /* Doré plus foncé */
+    transform: scale(1.05);     /* Légère augmentation de taille */
+}
+
+.btn-service {
+    display: inline-block;
+    background-color: #D4AF37;
+    color: #1A1A1A;
+    padding: 10px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-service:hover {
+    background-color: #B8960F;
+}
+
+/* ========================================
+   SECTION À PROPOS (ACCUEIL)
+   ======================================== */
+
+.about {
+    padding: 80px 0;
+    background-color: #FFFFFF;
+}
+
+.about h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #1A1A1A;
+    margin-bottom: 40px;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;  /* 2 colonnes */
+    gap: 40px;
+    align-items: center;
+}
+
+.about-text p {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+}
+
+/* ========================================
+   PAGE SERVICES
+   ======================================== */
+
+.services-page {
+    padding: 60px 0 80px;
+}
+
+.services-page h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #1A1A1A;
+    margin-bottom: 15px;
+}
+
+.services-intro {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 50px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+/* Carte de service */
+.service-card {
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);  /* Lève la carte */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.service-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;           /* L'image remplit bien le cadre */
+}
+
+.service-content {
+    padding: 20px;
+}
+
+.service-content h3 {
+    font-size: 1.3rem;
+    color: #1A1A1A;
+    margin-bottom: 10px;
+}
+
+.service-content p {
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.service-price {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #D4AF37;
+    margin-bottom: 15px;
+}
+
+/* ========================================
+   PAGE CONTACT
+   ======================================== */
+
+.contact-page {
+    padding: 60px 0 80px;
+}
+
+.contact-page h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #1A1A1A;
+    margin-bottom: 15px;
+}
+
+.contact-intro {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 50px;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;  /* Formulaire plus grand */
+    gap: 50px;
+}
+
+/* Formulaire */
+.contact-form h2 {
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+    color: #1A1A1A;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #DDD;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #D4AF37;       /* Doré quand on clique */
+    outline: none;
+}
+
+.form-group textarea {
+    resize: vertical;            /* Permet d'agrandir verticalement */
+}
+
+/* Informations de contact */
+.contact-info h2 {
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+    color: #1A1A1A;
+}
+
+.info-item {
+    margin-bottom: 30px;
+}
+
+.info-item h3 {
+    color: #D4AF37;
+    margin-bottom: 8px;
+}
+
+.info-item p {
+    color: #555;
+    line-height: 1.8;
+}
+
+.social-icon {
+    font-size: 2rem;
+    margin-right: 15px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.2);
+}
+
+/* ========================================
+   FOOTER (PIED DE PAGE)
+   ======================================== */
+
+footer {
+    background-color: #1A1A1A;
+    color: #FFFFFF;
+    padding: 50px 0 20px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-bottom: 30px;
+}
+
+.footer-col h3,
+.footer-col h4 {
+    color: #D4AF37;
+    margin-bottom: 15px;
+}
+
+.footer-col p {
+    color: #CCC;
+    line-height: 1.8;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #333;
+    color: #888;
+}
+
+/* ========================================
+   RESPONSIVE (MOBILE)
+   ======================================== */
+
+/* Pour les tablettes et petits écrans */
+@media (max-width: 992px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* Pour les smartphones */
+@media (max-width: 768px) {
+    /* Menu en colonne */
+    header .container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    /* Hero plus petit */
+    .hero {
+        padding: 60px 0;
+    }
+
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .hero-description {
+        font-size: 1rem;
+    }
+
+    /* Grille des services en 1 colonne */
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about h2,
+    .services-page h1,
+    .contact-page h1 {
+        font-size: 2rem;
+    }
+}
