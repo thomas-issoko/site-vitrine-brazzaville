@@ -2,7 +2,7 @@
 
 ## 📌 Description
 
-**Les Tresses Dorées** est un site vitrine professionnel développé pour un salon de coiffure situé à Brazzaville, République du Congo. Ce projet a été réalisé dans le cadre de la formation Akieni Academy (Full Stack) et constitue une démonstration complète des compétences en HTML5, CSS3, et Git/GitHub. Le site présente l'entreprise locale, ses services, et permet aux clients potentiels de prendre contact facilement. Il s'agit d'un projet pédagogique qui simule la création d'un site web d'entreprise locale congolaise
+**Les Tresses Dorées** est un site vitrine professionnel développé pour un salon de coiffure situé à Brazzaville, République du Congo. Ce projet a été réalisé dans le cadre de la formation Akieni Academy (Full Stack) et constitue une démonstration complète des compétences en HTML5, CSS3, et Git/GitHub. Le site présente l'entreprise locale, ses services, et permet aux clients potentiels de prendre contact facilement. Il s'agit d'un projet pédagogique qui simule la création d'un site web d'entreprise locale congolaise.
 
 ## 🎯 Objectifs du projet
 
